@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RaportApp</string>
+    <string name="data_start">Data i godzina start</string>
+    <string name="data_stop">Data i godzina stop</string>
 </resources>
