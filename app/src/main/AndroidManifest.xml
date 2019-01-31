@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".summary"></activity>
-        <activity android:name=".dataScreen" />
+        <activity android:name=".dataScreen">
+            <intent-filter>
+                <action android:name=".dataScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
