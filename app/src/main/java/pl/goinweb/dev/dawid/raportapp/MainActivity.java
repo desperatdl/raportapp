@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickButtonListener()
     {
-        next_button = (Button)findViewById(R.id.next_button);
+        next_button = findViewById(R.id.next_button);
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        exit_button = (Button)findViewById(R.id.exit_button);
+        exit_button = findViewById(R.id.exit_button);
         exit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        history_button = (Button)findViewById(R.id.history_button);
+        history_button = findViewById(R.id.history_button);
         history_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        driver_button = (Button)findViewById(R.id.driver_button);
+        driver_button = findViewById(R.id.driver_button);
         driver_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        car_button = (Button)findViewById(R.id.car_button);
+        car_button = findViewById(R.id.car_button);
         car_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

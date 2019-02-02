@@ -21,7 +21,7 @@ public class dataScreen extends AppCompatActivity {
 
     public void OnClickButtonListener()
     {
-        next_button = (Button)findViewById(R.id.next_button);
+        next_button = findViewById(R.id.next_button);
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +30,7 @@ public class dataScreen extends AppCompatActivity {
             }
         });
 
-        back_button = (Button)findViewById(R.id.back_button);
+        back_button = findViewById(R.id.back_button);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
