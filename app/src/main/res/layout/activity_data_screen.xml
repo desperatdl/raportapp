@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".dataScreen"
+    >
 
     <TextView
         android:id="@+id/data_start_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:inputType="text"
+        android:layout_marginTop="8dp"
         android:text="@string/data_start"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/data_start_button"
-        app:layout_constraintEnd_toStartOf="@+id/data_start_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/date_start_button"
+        app:layout_constraintEnd_toStartOf="@+id/date_start_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,44 +26,44 @@
     <TextView
         android:id="@+id/data_stop_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="@string/data_stop"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/data_stop_button"
-        app:layout_constraintEnd_toStartOf="@+id/data_stop_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/date_stop_button"
+        app:layout_constraintEnd_toStartOf="@+id/date_stop_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/przebieg_start_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Przebieg start"
+        android:text="@string/przebieg_start"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_start_text"
         app:layout_constraintEnd_toStartOf="@+id/przebieg_start_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/przebieg_stop_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Przebieg stop"
+        android:text="@string/przebieg_stop"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_stop_text"
         app:layout_constraintEnd_toStartOf="@+id/przebieg_stop_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/obrot_label"
@@ -69,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Obrót"
+        android:text="@string/obrot"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/obrot_text"
         app:layout_constraintEnd_toStartOf="@+id/obrot_text"
@@ -80,96 +82,95 @@
     <TextView
         android:id="@+id/mytaxi_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Mytaxi"
+        android:text="@string/mytaxi"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/mytaxi_text"
         app:layout_constraintEnd_toStartOf="@+id/mytaxi_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/terminal_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Terminal"
+        android:text="@string/terminal"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/terminal_text"
         app:layout_constraintEnd_toStartOf="@+id/terminal_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/firmowe_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="kursy firmowe"
+        android:text="@string/firmowe"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/firmowe_text"
         app:layout_constraintEnd_toStartOf="@+id/firmowe_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/paliwo_litry_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Paliwo litry"
+        android:text="@string/paliwo_litry"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_litry_text"
         app:layout_constraintEnd_toStartOf="@+id/paliwo_litry_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/paliwo_zl_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Paliwo zl"
+        android:text="@string/paliwo_zl"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_zl_text"
         app:layout_constraintEnd_toStartOf="@+id/paliwo_zl_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/sprzatanie_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Sprzątanie"
+        android:text="@string/sprzatanie"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/sprzatanie_text"
         app:layout_constraintEnd_toStartOf="@+id/sprzatanie_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/data_start_button"
+        android:id="@+id/date_start_button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:inputType="date"
-        android:text="Data"
+        android:text="@string/data"
         app:layout_constraintBaseline_toBaselineOf="@+id/time_start_button"
         app:layout_constraintEnd_toStartOf="@+id/time_start_button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -177,12 +178,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/data_stop_button"
+        android:id="@+id/date_stop_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Data"
+        android:text="@string/data"
         app:layout_constraintBaseline_toBaselineOf="@+id/time_stop_button"
         app:layout_constraintEnd_toStartOf="@+id/time_stop_button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -195,10 +196,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Godzina"
+        android:text="@string/godzina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/data_start_button"
+        app:layout_constraintStart_toEndOf="@+id/date_start_button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -208,10 +209,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Godzina"
+        android:text="@string/godzina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/data_stop_button"
+        app:layout_constraintStart_toEndOf="@+id/date_stop_button"
         app:layout_constraintTop_toBottomOf="@+id/time_start_button" />
 
     <EditText
@@ -225,7 +226,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/przebieg_start_label"
-        app:layout_constraintTop_toBottomOf="@+id/data_stop_button" />
+        app:layout_constraintTop_toBottomOf="@+id/date_stop_button"
+         />
 
     <EditText
         android:id="@+id/przebieg_stop_text"
@@ -336,7 +338,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Wstecz"
+        android:text="@string/wstecz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/check_button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -347,7 +349,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Sprawdź"
+        android:text="@string/sprawdz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/save_button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -358,7 +360,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Zapisz"
+        android:text="@string/zapisz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/next_button"
         app:layout_constraintHorizontal_bias="0.5"
@@ -369,7 +371,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Dalej"
+        android:text="@string/dalej"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

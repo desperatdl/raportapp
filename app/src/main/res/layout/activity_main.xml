@@ -72,7 +72,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
         android:text="Brak połączenia z bazą"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -94,7 +94,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
         android:text="Dostępna wersja:"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
         app:layout_constraintEnd_toStartOf="@+id/textView2" />
 
     <Button
