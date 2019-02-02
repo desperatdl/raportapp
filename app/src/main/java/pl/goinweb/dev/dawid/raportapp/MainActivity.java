@@ -2,18 +2,12 @@ package pl.goinweb.dev.dawid.raportapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.icu.lang.UScript;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private ListView car_list, driver_list ;
     protected static Button next_button, exit_button, car_button, driver_button, history_button;
     public String choosenDriver, choosenCar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
