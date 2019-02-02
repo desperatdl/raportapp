@@ -2,4 +2,19 @@
     <string name="app_name">RaportApp</string>
     <string name="data_start">Data i godzina start</string>
     <string name="data_stop">Data i godzina stop</string>
+    <string name="przebieg_stop">Przebieg stop</string>
+    <string name="przebieg_start">Przebieg start</string>
+    <string name="obrot">Obrót</string>
+    <string name="mytaxi">Mytaxi</string>
+    <string name="terminal">Terminal</string>
+    <string name="firmowe">Kursy firmowe</string>
+    <string name="paliwo_litry">Paliwo litry</string>
+    <string name="paliwo_zl">Paliwo zł</string>
+    <string name="sprzatanie">Sprzątanie</string>
+    <string name="data">Data</string>
+    <string name="godzina">Godzina</string>
+    <string name="wstecz">Wstecz</string>
+    <string name="zapisz">Zapisz</string>
+    <string name="dalej">Dalej</string>
+    <string name="sprawdz">Sprawdź</string>
 </resources>
