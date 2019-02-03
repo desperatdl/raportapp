@@ -47,6 +47,7 @@ public class BackgroundWorker extends AsyncTask<String, Integer, Long> {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     return null;
     }
 

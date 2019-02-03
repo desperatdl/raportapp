@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -17,13 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     BackgroundWorker bw = new BackgroundWorker();
     protected static Button next_button, exit_button, car_button, driver_button, history_button;
-    public String[] choosenDriver, choosenCar;
+    public String[] choosenDriver;
+    private String[] choosenCar;
     String car_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/car.html";
     String driver_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/driver.html";
 //                Toast.makeText(MainActivity.this, choosenDriver, Toast.LENGTH_LONG).show();
 
-    public String lista_kierowcow;
-    public String lista_aut;
+//    public String lista_kierowcow;
+//    public String lista_aut;
 
 
     @Override
@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public String[] pobierzListeAut()
+    public String[] downloadCarList()
     {
-        lista_aut = bw.resultCar;
+        String car_list = bw.resultCar;
         String[] list = null;
         // parse json
 
         try {
-            JSONArray json = new JSONArray(lista_aut);
+            JSONArray json = new JSONArray(car_list);
 
             list = new String[json.length()];
 
@@ -61,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
-    public String[] pobierzListeKierowcow()
+    public String[] downloadDriversList()
     {
-        lista_kierowcow = bw.resultDriver;
+        String driver_list = bw.resultDriver;
         String[] list = null;
         // parse json
 
         try {
-            JSONArray json = new JSONArray(lista_kierowcow);
+            JSONArray json = new JSONArray(driver_list);
 
             list = new String[json.length()];
 
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
-    public void wybierzKierowce(final CharSequence[] data)
+    public void showDriverPicker(final CharSequence[] data)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wybierz kierowce");
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void wybierzAuto(final CharSequence[] data)
+    public void showCarPicker(final CharSequence[] data)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wybierz auto");
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int item) {
                 String string = (String)(data[item]);
                 String[] parts = string.split("\\.");
-                choosenCar = parts;
+                setChoosenCar(parts);
                 car_button.setText(parts[1]);
             }
         });
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                wybierzKierowce(pobierzListeKierowcow());
+                showDriverPicker(downloadDriversList());
             }
         });
 
@@ -162,9 +162,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                wybierzAuto(pobierzListeAut());
+                showCarPicker(downloadCarList());
             }
         });
     }
 
+    public String[] getChoosenCar() {
+        return choosenCar;
+    }
+
+    public void setChoosenCar(String[] choosenCar) {
+        this.choosenCar = choosenCar;
+    }
 }
