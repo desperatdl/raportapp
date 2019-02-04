@@ -21,12 +21,14 @@ public class dataScreen extends AppCompatActivity {
 
     static public Button next_button, back_button, check_button, save_button, date_start_button, date_stop_button, time_start_button, time_stop_button;
     static public String choosen_datetime_start, choosen_datetime_stop;
-    static public String time_start, time_stop, date_start, date_stop;
+    public static String time_start, time_stop, date_start, date_stop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_screen);
         OnClickButtonListener();
+        dateFormatter df = new dateFormatter();
+        df.doIt(time_start, time_stop, date_start, date_stop);
     }
 
     public void OnClickButtonListener()
@@ -66,6 +68,24 @@ public class dataScreen extends AppCompatActivity {
             }
         });
 
+        date_start_button = findViewById(R.id.date_start_button);
+        date_start_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DateStartPicker();
+                newFragment.show(getSupportFragmentManager(), "datePicker");
+
+            }
+        });
+
+        date_stop_button = findViewById(R.id.date_stop_button);
+        date_stop_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DateStopPicker();
+                newFragment.show(getSupportFragmentManager(), "datePicker");
+            }
+        });
     }
 
     public static class TimeStartPicker extends DialogFragment
@@ -79,7 +99,7 @@ public class dataScreen extends AppCompatActivity {
             int minute = c.get(Calendar.MINUTE);
             // Create a new instance of TimePickerDialog and return it
             return new TimePickerDialog(getActivity(), this, hour, minute,
-                    DateFormat.is24HourFormat(getActivity()));
+                      DateFormat.is24HourFormat(getActivity()));
         }
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -154,3 +174,4 @@ public class dataScreen extends AppCompatActivity {
         }
     }
 }
+
