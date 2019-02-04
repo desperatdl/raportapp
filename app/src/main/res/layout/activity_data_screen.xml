@@ -1,380 +1,389 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dataScreen"
-    >
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/data_start_label"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/data_start"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/date_start_button"
-        app:layout_constraintEnd_toStartOf="@+id/date_start_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:isScrollContainer="true"
+        tools:context=".dataScreen">
 
-    <TextView
-        android:id="@+id/data_stop_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/data_stop"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/date_stop_button"
-        app:layout_constraintEnd_toStartOf="@+id/date_stop_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/data_start_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/data_start"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/date_start_button"
+            app:layout_constraintEnd_toStartOf="@+id/date_start_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/przebieg_start_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/przebieg_start"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_start_text"
-        app:layout_constraintEnd_toStartOf="@+id/przebieg_start_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/data_stop_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/data_stop"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/date_stop_button"
+            app:layout_constraintEnd_toStartOf="@+id/date_stop_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/przebieg_stop_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/przebieg_stop"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_stop_text"
-        app:layout_constraintEnd_toStartOf="@+id/przebieg_stop_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/przebieg_start_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/przebieg_start"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_start_text"
+            app:layout_constraintEnd_toStartOf="@+id/przebieg_start_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/obrot_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/obrot"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/obrot_text"
-        app:layout_constraintEnd_toStartOf="@+id/obrot_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/przebieg_stop_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/przebieg_stop"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/przebieg_stop_text"
+            app:layout_constraintEnd_toStartOf="@+id/przebieg_stop_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/mytaxi_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/mytaxi"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mytaxi_text"
-        app:layout_constraintEnd_toStartOf="@+id/mytaxi_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/obrot_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/obrot"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/obrot_text"
+            app:layout_constraintEnd_toStartOf="@+id/obrot_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/terminal_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/terminal"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/terminal_text"
-        app:layout_constraintEnd_toStartOf="@+id/terminal_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/mytaxi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/mytaxi"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mytaxi_text"
+            app:layout_constraintEnd_toStartOf="@+id/mytaxi_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/firmowe_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/firmowe"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/firmowe_text"
-        app:layout_constraintEnd_toStartOf="@+id/firmowe_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/terminal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/terminal"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/terminal_text"
+            app:layout_constraintEnd_toStartOf="@+id/terminal_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/paliwo_litry_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/paliwo_litry"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_litry_text"
-        app:layout_constraintEnd_toStartOf="@+id/paliwo_litry_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/firmowe_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/firmowe"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/firmowe_text"
+            app:layout_constraintEnd_toStartOf="@+id/firmowe_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/paliwo_zl_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/paliwo_zl"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_zl_text"
-        app:layout_constraintEnd_toStartOf="@+id/paliwo_zl_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/paliwo_litry_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/paliwo_litry"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_litry_text"
+            app:layout_constraintEnd_toStartOf="@+id/paliwo_litry_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/sprzatanie_label"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="@string/sprzatanie"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/sprzatanie_text"
-        app:layout_constraintEnd_toStartOf="@+id/sprzatanie_text"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/paliwo_zl_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/paliwo_zl"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/paliwo_zl_text"
+            app:layout_constraintEnd_toStartOf="@+id/paliwo_zl_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/date_start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/data"
-        app:layout_constraintBaseline_toBaselineOf="@+id/time_start_button"
-        app:layout_constraintEnd_toStartOf="@+id/time_start_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/data_start_label"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/sprzatanie_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/sprzatanie"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sprzatanie_text"
+            app:layout_constraintEnd_toStartOf="@+id/sprzatanie_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/date_stop_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/data"
-        app:layout_constraintBaseline_toBaselineOf="@+id/time_stop_button"
-        app:layout_constraintEnd_toStartOf="@+id/time_stop_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/data_stop_label" />
+        <Button
+            android:id="@+id/date_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/data"
+            app:layout_constraintBaseline_toBaselineOf="@+id/time_start_button"
+            app:layout_constraintEnd_toStartOf="@+id/time_start_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/data_start_label"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/time_start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/godzina"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/date_start_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/date_stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/data"
+            app:layout_constraintBaseline_toBaselineOf="@+id/time_stop_button"
+            app:layout_constraintEnd_toStartOf="@+id/time_stop_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/data_stop_label" />
 
-    <Button
-        android:id="@+id/time_stop_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/godzina"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/date_stop_button"
-        app:layout_constraintTop_toBottomOf="@+id/time_start_button" />
+        <Button
+            android:id="@+id/time_start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/godzina"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/date_start_button"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/przebieg_start_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/przebieg_start_label"
-        app:layout_constraintTop_toBottomOf="@+id/date_stop_button"
-         />
+        <Button
+            android:id="@+id/time_stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/godzina"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/date_stop_button"
+            app:layout_constraintTop_toBottomOf="@+id/time_start_button" />
 
-    <EditText
-        android:id="@+id/przebieg_stop_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/przebieg_stop_label"
-        app:layout_constraintTop_toBottomOf="@+id/przebieg_start_text" />
+        <EditText
+            android:id="@+id/przebieg_start_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/przebieg_start_label"
+            app:layout_constraintTop_toBottomOf="@+id/date_stop_button" />
 
-    <EditText
-        android:id="@+id/obrot_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/obrot_label"
-        app:layout_constraintTop_toBottomOf="@+id/przebieg_stop_text" />
+        <EditText
+            android:id="@+id/przebieg_stop_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/przebieg_stop_label"
+            app:layout_constraintTop_toBottomOf="@+id/przebieg_start_text" />
 
-    <EditText
-        android:id="@+id/mytaxi_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/mytaxi_label"
-        app:layout_constraintTop_toBottomOf="@+id/obrot_text" />
+        <EditText
+            android:id="@+id/obrot_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/obrot_label"
+            app:layout_constraintTop_toBottomOf="@+id/przebieg_stop_text" />
 
-    <EditText
-        android:id="@+id/terminal_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/terminal_label"
-        app:layout_constraintTop_toBottomOf="@+id/mytaxi_text" />
+        <EditText
+            android:id="@+id/mytaxi_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mytaxi_label"
+            app:layout_constraintTop_toBottomOf="@+id/obrot_text" />
 
-    <EditText
-        android:id="@+id/firmowe_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/firmowe_label"
-        app:layout_constraintTop_toBottomOf="@+id/terminal_text" />
+        <EditText
+            android:id="@+id/terminal_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/terminal_label"
+            app:layout_constraintTop_toBottomOf="@+id/mytaxi_text" />
 
-    <EditText
-        android:id="@+id/paliwo_litry_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/paliwo_litry_label"
-        app:layout_constraintTop_toBottomOf="@+id/firmowe_text" />
+        <EditText
+            android:id="@+id/firmowe_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/firmowe_label"
+            app:layout_constraintTop_toBottomOf="@+id/terminal_text" />
 
-    <EditText
-        android:id="@+id/paliwo_zl_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/paliwo_zl_label"
-        app:layout_constraintTop_toBottomOf="@+id/paliwo_litry_text" />
+        <EditText
+            android:id="@+id/paliwo_litry_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/paliwo_litry_label"
+            app:layout_constraintTop_toBottomOf="@+id/firmowe_text" />
 
-    <EditText
-        android:id="@+id/sprzatanie_text"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/sprzatanie_label"
-        app:layout_constraintTop_toBottomOf="@+id/paliwo_zl_text" />
+        <EditText
+            android:id="@+id/paliwo_zl_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/paliwo_zl_label"
+            app:layout_constraintTop_toBottomOf="@+id/paliwo_litry_text" />
 
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/wstecz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/check_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/sprzatanie_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sprzatanie_label"
+            app:layout_constraintTop_toBottomOf="@+id/paliwo_zl_text" />
 
-    <Button
-        android:id="@+id/check_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/sprawdz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/save_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/back_button" />
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/wstecz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/check_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/zapisz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/check_button" />
+        <Button
+            android:id="@+id/check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/sprawdz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/save_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/back_button" />
 
-    <Button
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/dalej"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/save_button" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/zapisz"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/next_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/check_button" />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/dalej"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/save_button"
+            app:layout_constraintTop_toBottomOf="@+id/sprzatanie_text"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
