@@ -16,14 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
     BackgroundWorker bw = new BackgroundWorker();
     protected static Button next_button, exit_button, car_button, driver_button, history_button;
-    public String[] choosenDriver;
-    private String[] choosenCar;
+    protected static String[] choosenDriver;
+    protected static String[] choosenCar;
     String car_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/car.html";
     String driver_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/driver.html";
 //                Toast.makeText(MainActivity.this, choosenDriver, Toast.LENGTH_LONG).show();
 
-//    public String lista_kierowcow;
-//    public String lista_aut;
 
 
     @Override
@@ -125,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, dataScreen.class);
+                Intent intent = new Intent(MainActivity.this, DataScreenActivity.class);
                 startActivity(intent);
             }
         });
@@ -143,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         history_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, history.class);
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
             }
         });

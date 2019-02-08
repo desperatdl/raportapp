@@ -16,7 +16,7 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 
-public class dataScreen extends AppCompatActivity {
+public class DataScreenActivity extends AppCompatActivity {
 
 
     static public Button next_button, back_button, check_button, save_button, date_start_button, date_stop_button, time_start_button, time_stop_button;
@@ -27,8 +27,6 @@ public class dataScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_screen);
         OnClickButtonListener();
-        dateFormatter df = new dateFormatter();
-        df.doIt(time_start, time_stop, date_start, date_stop);
     }
 
     public void OnClickButtonListener()
@@ -37,7 +35,7 @@ public class dataScreen extends AppCompatActivity {
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(dataScreen.this, summary.class);
+                Intent intent = new Intent(DataScreenActivity.this, SummaryActivity.class);
                 startActivity(intent);
             }
         });
@@ -86,6 +84,23 @@ public class dataScreen extends AppCompatActivity {
                 newFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });
+
+        check_button = findViewById(R.id.check_button);
+        check_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                formatDate();
+            }
+        });
+    }
+
+    void formatDate()
+    {
+        DateFormatter df = new DateFormatter();
+        df.formatDate(time_start, time_stop, date_start, date_stop);
+        choosen_datetime_start = df.dt_start;
+        choosen_datetime_stop = df.dt_stop;
+
     }
 
     public static class TimeStartPicker extends DialogFragment
@@ -104,7 +119,7 @@ public class dataScreen extends AppCompatActivity {
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             // Do something with the time chosen by the user
-            time_start =  hourOfDay + " : " + minute;
+            time_start =  hourOfDay + ":" + minute;
             time_start_button.setText(time_start);
         }
     }
@@ -125,7 +140,7 @@ public class dataScreen extends AppCompatActivity {
 
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             // Do something with the time chosen by the user
-            time_stop =  hourOfDay + " : " + minute;
+            time_stop =  hourOfDay + ":" + minute;
             time_stop_button.setText(time_stop);
         }
     }
