@@ -2,6 +2,8 @@ package pl.goinweb.dev.dawid.raportapp;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,9 +23,13 @@ public class BackgroundWorker extends AsyncTask<String, Integer, Long> {
     String result = null;
     String resultCar = null;
     String resultDriver = null;
+    String resultData = null;
+    String resultVersion = null;
 
     String  driver_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/driver.html";
     String  car_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/car.html";
+    String  data_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/data.html";
+    String  version_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/version.html";
 
     @Override
     protected Long doInBackground(String... params) {
@@ -42,6 +48,18 @@ public class BackgroundWorker extends AsyncTask<String, Integer, Long> {
             resultCar = readStream(is2);
             is2.close();
             httpURLConnection2.disconnect();
+            URL url3 = new URL(data_url);
+            HttpURLConnection httpURLConnection3 = (HttpURLConnection) url3.openConnection();
+            InputStream is3 = httpURLConnection3.getInputStream();
+            resultData = readStream(is3);
+            is3.close();
+            httpURLConnection3.disconnect();
+            URL url4 = new URL(version_url);
+            HttpURLConnection httpURLConnection4 = (HttpURLConnection) url4.openConnection();
+            InputStream is4 = httpURLConnection4.getInputStream();
+            resultVersion = readStream(is4);
+            is4.close();
+            httpURLConnection4.disconnect();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -85,4 +103,6 @@ public class BackgroundWorker extends AsyncTask<String, Integer, Long> {
         super.onPostExecute(aLong);
 
     }
-}
+
+    }
+

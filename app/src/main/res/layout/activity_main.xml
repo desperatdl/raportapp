@@ -54,26 +54,29 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_your_version"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:text="Brak połączenia z bazą"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/text_new_version"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_new_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
         android:text="Brak połączenia z bazą"
         app:layout_constraintBottom_toTopOf="@+id/next_button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView3"
@@ -84,7 +87,7 @@
         android:layout_marginBottom="10dp"
         android:text="Twoja wersja:"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView" />
+        app:layout_constraintEnd_toStartOf="@+id/text_your_version" />
 
     <TextView
         android:id="@+id/textView4"
@@ -95,7 +98,7 @@
         android:layout_marginBottom="40dp"
         android:text="Dostępna wersja:"
         app:layout_constraintBottom_toTopOf="@+id/next_button"
-        app:layout_constraintEnd_toStartOf="@+id/textView2" />
+        app:layout_constraintEnd_toStartOf="@+id/text_your_version" />
 
     <Button
         android:id="@+id/next_button"

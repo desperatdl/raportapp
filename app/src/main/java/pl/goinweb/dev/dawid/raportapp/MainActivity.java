@@ -5,22 +5,28 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
 public class MainActivity extends AppCompatActivity {
 
     BackgroundWorker bw = new BackgroundWorker();
+
     protected static Button next_button, exit_button, car_button, driver_button, history_button;
     protected static String[] choosenDriver;
     protected static String[] choosenCar;
-    String car_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/car.html";
-    String driver_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/driver.html";
-//                Toast.makeText(MainActivity.this, choosenDriver, Toast.LENGTH_LONG).show();
+    protected static String version;
+//    String car_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/car.html";
+//    String driver_list_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/driver.html";
+//    String version_url = "http://dawid.dev.goinweb.pl/dawid/raport/androidapi/version.html";
 
 
 
@@ -30,9 +36,59 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         onClickButtonListener();
         bw.execute();
-
     }
 
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        getVersion();
+        Toast.makeText(this, "onStart()", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "onRestart()", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this, "onResume()", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onPause() {
+        Toast.makeText(this, "onPause()", Toast.LENGTH_LONG).show();
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Toast.makeText(this, "onStop()", Toast.LENGTH_LONG).show();
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show();
+        super.onDestroy();
+    }
+    public void getVersion() {
+        String car_list = bw.resultVersion;
+
+        try {
+            // reprezentacja obiektu JSON w Javie
+            JSONObject json = new JSONObject(car_list);
+
+            // pobranie pól obiektu JSON i wyświetlenie ich na ekranie
+            ((TextView) findViewById(R.id.text_new_version)).setText(json.optString("version"));
+
+        } catch (Exception e) {
+            // obsłuż wyjątek
+            Log.d(MainActivity.class.getSimpleName(), e.toString());
+        }    }
 
     public String[] downloadCarList()
     {
